@@ -48,3 +48,4 @@ npm run dev
 
 **Frontend**: React, React Router, Vite, Axios
 **Backend**: Node.js, Express.js, MongoDB, Mongoose, JSON Web Tokens
+
