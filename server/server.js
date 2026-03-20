@@ -35,13 +35,13 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // 3. Sanitize data (prevent NoSQL injection)
-app.use(mongoSanitize());
+// app.use(mongoSanitize());
 
 // 4. Prevent XSS attacks
-app.use(xss());
+// app.use(xss());
 
 // 5. Prevent HTTP parameter pollution
-app.use(hpp());
+// app.use(hpp());
 
 // 6. Rate limiting (100 requests per 10 mins per IP)
 const limiter = rateLimit({

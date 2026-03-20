@@ -8,7 +8,6 @@ const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
   const { login, user } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -46,9 +45,7 @@ const Login = () => {
           <h2>Welcome Back</h2>
           <p>Log in to your LuxeEstates account</p>
         </div>
-
         {error && <div className="auth-error">{error}</div>}
-
         <form onSubmit={onSubmit} className="auth-form">
           <div className="form-group">
             <label className="form-label">Email Address</label>
@@ -65,7 +62,6 @@ const Login = () => {
               />
             </div>
           </div>
-
           <div className="form-group">
             <label className="form-label">Password</label>
             <div className="input-with-icon">
@@ -82,9 +78,9 @@ const Login = () => {
             </div>
           </div>
 
-          <button 
-            type="submit" 
-            className="btn btn-primary w-full mt-4" 
+          <button
+            type="submit"
+            className="btn btn-primary w-full mt-4"
             disabled={isSubmitting}
           >
             {isSubmitting ? 'Logging in...' : 'Login'}
@@ -100,5 +96,4 @@ const Login = () => {
     </div>
   );
 };
-
 export default Login;
